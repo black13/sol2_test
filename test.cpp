@@ -1,5 +1,11 @@
+#include <iostream>
 #include "lua.h"
-int main()
-{
-  return 0;
+
+using namespace std;
+//using namespace Hello;
+
+int main(int argc, char *argv[]) {
+  //  Speaker* speaker = new Speaker();
+
+  //speaker->sayHello();  
 }

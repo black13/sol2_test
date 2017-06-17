@@ -1,6 +1,29 @@
-cmake_minimum_required(VERSION 2.8.9)
-project(lua)
-add_library(lua STATIC
+add_library (lua-5.3.4 
+      src/lapi.h
+      src/lauxlib.h
+      src/lcode.h
+      src/lctype.h
+      src/ldebug.h
+      src/ldo.h
+      src/lfunc.h
+      src/lgc.h
+      src/llex.h
+      src/llimits.h
+      src/lmem.h
+      src/lobject.h
+      src/lopcodes.h
+      src/lparser.h
+      src/lprefix.h
+      src/lstate.h
+      src/lstring.h
+      src/ltable.h
+      src/ltm.h
+      src/lua.h
+      src/luaconf.h
+      src/lualib.h
+      src/lundump.h
+      src/lvm.h
+      src/lzio.h
       src/lapi.c
       src/lauxlib.c
       src/lbaselib.c
@@ -33,29 +56,7 @@ add_library(lua STATIC
       src/lundump.c
       src/lutf8lib.c
       src/lvm.c
-      src/lzio.c
-      src/lapi.h
-      src/lauxlib.h
-      src/lcode.h
-      src/lctype.h
-      src/ldebug.h
-      src/ldo.h
-      src/lfunc.h
-      src/lgc.h
-      src/llex.h
-      src/llimits.h
-      src/lmem.h
-      src/lobject.h
-      src/lopcodes.h
-      src/lparser.h
-      src/lprefix.h
-      src/lstate.h
-      src/lstring.h
-      src/ltable.h
-      src/ltm.h
-      src/lua.h
-      src/luaconf.h
-      src/lualib.h
-      src/lundump.h
-      src/lvm.h
-      src/lzio.h)
+      src/lzio.c)
+
+install (TARGETS lua-5.3.4 DESTINATION bin)
+install (FILES lua.h DESTINATION include)
